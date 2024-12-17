@@ -28,8 +28,8 @@
 	<div id = "container_new">
 		<div id="content">
 			<h2>This is the Admin's Page</h2>
-            <img src="admin-template-vue-shards-featured-2.png" alt="Not a fake dashboard" width="1000" height="600">
-            <img src="hr-analytics-dashboard-4.png" alt="Not a fake dashboard 2" width="1000" height="600">
+            <img src="img/admin-template-vue-shards-featured-2.png" alt="Not a fake dashboard" width="1000" height="600">
+            <img src="img/hr-analytics-dashboard-4.png" alt="Not a fake dashboard 2" width="1000" height="600">
 		</div>
 	</div>
 	<?php include('footer.php'); ?>

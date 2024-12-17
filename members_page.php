@@ -28,7 +28,7 @@
 		<div id="content">
 			<h2>This is the Member's Page</h2>
             <p>Thank you for being a member of this website! If you want to access more tools, you can subscribe to a plan provided below.</p>
-            <img src="subscriptions-members-theme-1.png" alt="Not a fake dashboard" width="900" height="500">
+            <img src="img/subscriptions-members-theme-1.png" alt="Not a fake dashboard" width="900" height="500">
             <p>Note: We have your family, pay up.</p>
 		</div>
 	</div>
