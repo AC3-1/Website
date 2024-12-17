@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang = "en">
+<style>
+    body{
+	display: flex;
+	height: 100vh;
+	margin: 0;
+	background-image: url("https://images.pexels.com/photos/301717/pexels-photo-301717.jpeg");
+}
+#mainContent {					/*Simple To-Do List div*/
+	float: left;
+	margin-bottom: 20%;
+	margin-top: 20%;
+	margin-left: 20px;
+    padding: 20px;
+    border: 5px solid black;
+	border-style: ridge;
+	width: 500px;
+	height: 130px;
+	position: relative;
+	text-align: center;
+	background-color: white;
+}
+#mainContent h2 {				/*Simple To-Do List title*/
+	margin: 0;
+	padding: 0 10px;
+	background-color: white;
+	position: absolute;
+	top: -59px;
+	left: 50%;
+	transform: translateX(-50%);
+	border: 3px solid black;
+	border-left: 2px solid transparent;
+	border-right: 2px solid transparent;
+}
+#mainContent h2::before,
+#mainContent h2::after {			/*mainContent title border*/
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    background-color: black;
+}
+#mainContent h2::before {
+    left: 0;
+	top: 0;
+}
+#mainContent h2::after {
+    right: 0;
+	top: 0;
+}
+#TaskList {						/*TaskList div*/
+	float: right;
+	width: 50%;
+	padding: 10px;
+	border: 5px solid black;
+	border-style: ridge;
+	background-color: #fdfdfd;
+	box-shadow: 0px 0px 15px;
+	text-align: left;
+	line-height: 1.6;
+	position: relative;
+	margin-top: 30px;
+	margin-left: 350px;
+	height: max-content;
+	background-color: white;
+}
+#TaskList h3 {					/*TaskList title*/
+	margin: 0;
+	padding: 0px 10px;
+	background-color: white;
+	position: absolute;
+	top: -15px;
+	left: 50%;
+	font-size: 25px;
+	transform: translateX(-50%);
+	border: 3px solid black;
+	border-left: 2px solid transparent;
+	border-right: 2px solid transparent;
+}
+#TaskList h3::before,
+#TaskList h3::after {			/*TaskList title border*/
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    background-color: black;
+}
+#TaskList h3::before {
+    left: 0;
+	top: 0;
+}
+#TaskList h3::after {
+    right: 0;
+	top: 0;
+}
+#taskList {						/*The List*/
+	margin-top: 20px;
+    list-style-type: square;
+    padding: 70px;
+	font-size: 25px;
+	max-height: 720px;
+	overflow-y: auto;
+}
+#taskList li button {
+	border: none;
+	font-size: 16px;
+	cursor: pointer;
+	background-color: light gray;
+	margin-left: 20px;
+}
+#taskList li button:hover {
+	color: black;
+	background-color: #ff0000;
+}
+#taskInput {					/*Input*/
+    width: 80%;
+    padding: 10px;
+	margin-top: 20px;
+	text-align: center;
+	border: 1px solid black;
+	border-radius: 5px;
+	background-color:#fefefe;
+	box-shadow: inset 0px 1px 2px;
+}
+#addTaskbtn {					/*Add task Button*/
+	margin-top: 10px;
+    padding: 10px 20px;
+	cursor: pointer;
+	border: none;
+	border-radius: 3px;
+}
+#addTaskbtn:hover{
+	background-color: gray;
+	border-radius: 3px;
+}
+.completed{
+	text-decoration: line-through;
+	color: gray;
+}
+.completed-btn {
+	background-color: white;
+	border: 1px solid gray;
+	cursor: pointer;
+	margin-left: 10px; 
+}
+.completed-btn:hover {
+	background-color: yellow;
+}
+</style>
+<head>
+
+	<meta charset = "UTF-8">
+	<meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+	<title> To Do List </title>
+</head>
+<body>
+	<div id = "mainContent">
+		<h2>Simple To-Do List </h2>
+		<input type = "text" id="taskInput" placeholder = "Add a task...">
+		<button id= "addTaskbtn"> Add Task </button>
+	</div>
+	<div id = "TaskList">
+		<h3>Task List</h3>
+		<ul id = "taskList"></ul>
+	</div>
+	<script src="submit.js"> </script>
+<script>
+    const taskInput = document.getElementById('taskInput');
+const addTaskbtn = document.getElementById('addTaskbtn');
+const taskList = document.getElementById('taskList');
+
+function addTask() {
+	const taskText = taskInput.value.trim();
+		if(taskText !== ""){		
+			const li = document.createElement('li');
+			li.textContent = taskText;
+			
+			const completeBtn = document.createElement("button");
+			completeBtn.textContent = "Completed";
+			completeBtn.style.marginRight = '10px'; 
+			completeBtn.onclick = function (){
+				li.classList.toggle("completed");
+			};
+			const deleteBtn = document.createElement("button");
+			deleteBtn.textContent = "Remove";
+			deleteBtn.onclick = function (){
+				taskList.removeChild(li);
+			};
+			
+			li.appendChild(completeBtn);
+			li.appendChild(deleteBtn);
+			taskList.appendChild(li);
+			taskInput.value = '';
+			
+			li.addEventListener("click", function(){
+				li.taskList.toggle("completed");
+			});
+		}else{
+			window.alert('Wala pa utos si Mom');
+		}
+}
+addTaskbtn.addEventListener("click", addTask);
+taskInput.addEventListener('keypress', function(e){
+	if(e.key === 'Enter'){
+		addTask();
+	}
+});
+</script>>
+</body>
+</html>

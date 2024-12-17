@@ -1,0 +1,389 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: default;
+}
+body {
+	background-color: #c3ccc6;
+}
+#head-nav{
+	height: auto;
+	overflow: hidden;
+	width: 100vw;
+}
+#container{
+	display: flex;
+	justify-content: space-between;
+	margin: 60px 20px 20px;
+	padding: 0;
+}
+#header {
+	background-color: #73767B;
+	text-align: center;
+	justify-content: center;
+	height: 100px;
+	padding-top: 20px;
+	font-family: Marker Felt, fantasy;
+}
+#header h1 {
+	font-size: 45px;
+}
+#nav ul {
+	background-color: #343a40;
+	justify-content: center;
+	list-style-type: none;
+	display: flex;
+	padding: 0;
+	margin: 0;
+}
+#nav li {
+	margin-right: 10px;
+}
+#nav a {
+	text-decoration: none;
+	color: #f2ffff;
+	padding: 10px 15px;
+	display: block;
+}
+#nav a:hover {
+	background-color: #615E60;
+	transform: scale(1.01);
+	color: #E0F0FF;
+	font-size: 1.2em;
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+#nav i {
+	margin-right: 5px;
+}
+#content {
+	margin: 10px 60px 20px;
+	text-align: center;
+	width: max-content;
+	padding: 0px 0px 40px;
+	border: 2px solid #04a5a5;
+	border-radius: 10px;
+	box-shadow: 0 9px 10px rgba(207, 212, 222, 1);
+	background-color: #d6eeee;
+}
+#content p{
+	font-size: 14px;
+}
+#info-col {
+	width: 675px;
+	height: min-content;
+	text-align: center;
+	border: 6px solid #04a5a5;
+	border-radius: 10px;
+	background-color: #008080;
+	box-shadow: 0 9px 10px rgba(207, 212, 222, 1);
+	color:#ffffff;
+}
+#pfp{
+	margin: 5px 0px 5px;
+	padding-top: 14px;
+	font-size: 74px;
+	height: 8rem;
+	width: 8rem;
+	border: 10px solid #7cdacc;
+	border-radius: 900px;
+}
+.divider{
+	width: 80%;
+	height: 2px;
+	background-color: white;
+	margin: 10px auto 15px;
+}
+#info-coll ul {
+	list-style: none;
+	padding: 0;
+	margin-top: 20px;
+}
+#info-coll ul i {
+	font-size: 29px;
+	margin-right: 10px;
+	margin-left: 10px;
+	color: white;
+}
+#info-coll ul i:hover{
+	transform: scale(1.2);
+	transition: all 0.3s ease;
+	cursor: pointer;
+	color: #E0F0FF;
+}
+#footer {
+	position: relative;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+#reg {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 50px 0px 0px;
+}
+#register {
+	background-color: #f9f9f9;
+    padding: 20px;
+    margin: 50px auto;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #dddddd;
+	text-align: center;
+}
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	max-width: 350px;
+	background-color: #fff;
+	padding: 30px 20px 0px;
+	border-radius: 20px;
+	position: relative;
+}
+  
+.title {
+	font-size: 28px;
+	color: royalblue;
+	font-weight: 600;
+	letter-spacing: -1px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	padding-left: 30px;
+  }
+  
+.title::before,.title::after {
+	position: absolute;
+	content: "";
+	height: 16px;
+	width: 16px;
+	border-radius: 50%;
+	left: 0px;
+	background-color: royalblue;
+}
+  
+.title::before {
+	width: 18px;
+	height: 18px;
+	background-color: royalblue;
+}
+  
+.title::after {
+	width: 18px;
+	height: 18px;
+	animation: pulse 1s linear infinite;
+}
+  
+.message, .signin {
+	color: rgba(88, 87, 87, 0.822);
+	font-size: 14px;
+}
+  
+.signin {
+	text-align: center;
+}
+  
+.signin a {
+	color: royalblue;
+}
+  
+.signin a:hover {
+	text-decoration: underline royalblue;
+}
+  
+.flex {
+	display: flex;
+	width: 100%;
+	gap: 6px;
+}
+  
+.form label {
+	position: relative;
+}
+  
+.form label .input {
+	width: 100%;
+	padding: 5px 5px 20px 10px;
+	outline: 0;
+	border: 1px solid rgba(105, 105, 105, 0.397);
+	border-radius: 10px;
+}
+  
+.form label .input + span {
+	position: absolute;
+	left: 15px;
+	top: 15px;
+	color: grey;
+	font-size: 0.9em;
+	cursor: text;
+	transition: 0.3s ease;
+}
+  
+.form label .input:placeholder-shown + span {
+	top: 15px;
+	font-size: 0.9em;
+}
+  
+.form label .input:focus + span,.form label .input:valid + span {
+	top: 30px;
+	font-size: 0.7em;
+	font-weight: 600;
+}
+  
+.form label .input:valid + span {
+	color: green;
+}
+  
+.submit {
+	border: none;
+	outline: none;
+	background-color: royalblue;
+	padding: 10px;
+	border-radius: 10px;
+	color: #fff;
+	font-size: 16px;
+	transform: .3s ease;
+}
+  
+.submit:hover {
+	background-color: rgb(56, 90, 194);
+}
+  
+@keyframes pulse {
+	from {
+	  transform: scale(0.9);
+	  opacity: 1;
+	}
+  
+	to {
+	  transform: scale(1.8);
+	  opacity: 0;
+	}
+}
+#container_table {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	padding: 0px 0px 40px;
+}
+#content_table {
+	margin: 10px 60px 20px;
+	text-align: center;
+	width: max-content;
+	padding: 0px 0px 40px;
+}
+.table, th, td{
+	border: 1px solid black;
+}
+.table, tr, td{
+	border-collapse: collapse;
+}
+#content h4{
+	justify-content: center;
+	text-align: center;
+	margin-top: 20px;
+	font-size: 35px;
+}
+.table_headers {
+	margin-left: 100px;
+	width: 700px;
+	table-layout: fixed;
+}
+.table th {
+	text-decoration: solid;
+	font-size: 19px;
+}
+.table_headers td {
+	font-size: 20px;
+}
+#delete_view {
+	display: flex;
+	margin-top: 50px;
+	justify-content: center;
+	align-items: center;
+	max-width: 100vw;
+}
+#delete_msg {
+	padding: 0px 0px 10px;
+	border: 2px solid black;
+	text-align: center;
+	max-width: max-content;
+	border-radius: 5px;
+}
+#delete_msg h3 {
+	width: 780px;
+	padding: 0px 5px 0px;
+}
+#delete_h2 {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+}
+#usure{
+	padding: 0px 8px 0px;
+}
+#submit-yes {
+	border: none;
+	outline: none;
+	background-color: rgb(202, 138, 240);
+	padding: 10px;
+	border-radius: 10px;
+	color: #fff;
+	font-size: 16px;
+	transform: .3s ease;
+}
+#submit-no {
+	border: none;
+	outline: none;
+	background-color: rgb(236, 63, 92);
+	padding: 10px;
+	border-radius: 10px;
+	color: #fff;
+	font-size: 16px;
+	transform: .3s ease;
+}
+#submit-no:hover{
+	background-color: rgb(255, 0, 0);
+	transform: scale(1.1);
+}
+#submit-yes:hover{
+	background-color: rgb(31, 17, 216);
+	transform: scale(1.1);
+}
+#edit_ye{
+	border: none;
+	outline: none;
+	background-color: rgb(202, 138, 240);
+	padding: 10px;
+	border-radius: 10px;
+	color: #fff;
+	font-size: 16px;
+	transform: .3s ease;
+}
+#edit_ye:hover{
+	background-color: rgb(31, 17, 216);
+	transform: scale(1.1);
+}
+#edit_users{
+	background-color: #f9f9f9;
+    padding: 20px;
+    margin: 50px auto;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #dddddd;
+	text-align: center;
+}
+#container_new {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	padding: 20px 0px 0px;
+}
